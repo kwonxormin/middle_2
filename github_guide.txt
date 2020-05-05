@@ -1,0 +1,45 @@
+https://codevkr.tistory.com/46 참고
+
+1. git 설치하기
+https://wonderbout.tistory.com/64 참고
+
+2. 설치 후 최초 1회 github 계정 등록 (폴더 생성 후 진행해도 됨)
+$ git config --global user.name "사용자" 
+$ git config --global user.email "사용자 이메일"
+
+3. 자격증명
+- git push origin master (커밋 후 업로드) 하기 위해 설치 후 최초 1회 편집
+제어판 - 사용자 계정 - Windows 자격 증명 관리 - github.com 선택 후 편집
+ 	주소 : git:https://github.com 
+	사용자 이름: kwonxormin (계정명) 
+	암호 : (github 로그인 암호)
+
+4-1. 원격저장소를 컴퓨터로 가져오기
+- 생성하고자 하는 위치에서 마우스 우클릭 - Git Bash Here - (이때 계정등록 해도 됨)
+$ git clone 저장소주소.git
+($ git clone https://github.com/kwonxormin/주소.git)
+
+4-2. 이미 내용이 있는 폴더를 git 명령어를 사용할 수 있는 폴더로 만듬
+- 사용하고자 하는 폴더내에서 마우스 우클릭 - Git Bash Here
+$ git init 
+
+5. add -> commit -> push 하면 원격 저장소로 파일 업로드 가능
+- 작성중인 문서를 생성된 폴더로 넣고 
+$ git status (생성,수정,삭제 상태 확인 가능)
+$ git add* (파일 add)
+$ git status (add 되어 초록색으로 표시 됨)
+
+6. 스테이징 영역의 파일들을 커밋하기
+$ git commit -m "커밋사항 요약"
+
+7-1. 커밋한 내용 업로드하기 (clone)
+$ git push origin master
+- origin = 등록한 원격 저장소
+- master 브랜치 이름
+orgin 저장소에 master 브랜치로 push 하는 명령어
+
+7-2. 커밋한 내용 업로드하기 (init)
+$ git push -f origin master
+- origin = 등록한 원격 저장소
+- master = 브랜치 이름
+- f 추가 = 커밋 이력을 강제로 덮어 씌우게 함
