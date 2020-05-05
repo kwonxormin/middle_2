@@ -39,7 +39,7 @@ $ git push origin master
 orgin 저장소에 master 브랜치로 push 하는 명령어
 
 7-2. 커밋한 내용 업로드하기 (init)
-$ git push -f origin master
+$ git push -f origin master https://github.com/kwonxormin/주소.git
 - origin = 등록한 원격 저장소
 - master = 브랜치 이름
 - f 추가 = 커밋 이력을 강제로 덮어 씌우게 함
